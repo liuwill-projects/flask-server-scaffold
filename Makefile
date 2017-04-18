@@ -4,3 +4,7 @@ install:
 
 run:
 	python server.py
+
+test:
+	tox -e py
+.PHONY: test

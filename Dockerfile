@@ -13,13 +13,14 @@ RUN apk add --no-cache ca-certificates
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
-RUN apt-get update \
-	&& pip install flask-cors -i https://pypi.tuna.tsinghua.edu.cn/simple \
-	&& pip install Flask -i https://pypi.tuna.tsinghua.edu.cn/simple \
-	&& mkdir /var/www \
-	&& mkdir /usr/src/app \
-	&& service ssh start
-
+#RUN mkdir -p /usr/src/app  
 WORKDIR /usr/src/app
+
+#ONBUILD COPY requirements.txt /usr/src/app/ 
+COPY requirements.txt /tmp/
+RUN pip install -r /tmp/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+RUN mkdir /var/www \
+	#&& service ssh start
 
 EXPOSE 22 80 443 5000

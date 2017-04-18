@@ -1,1 +1,5 @@
 jsonp.pyc
+.tox
+.cache
+MANIFEST
+pyflask.egg-info
