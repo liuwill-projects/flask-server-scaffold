@@ -1,5 +1,8 @@
-jsonp.pyc
 .tox
+.eggs
 .cache
+build
 MANIFEST
+jsonp.pyc
 pyflask.egg-info
+tests/.gitignore
