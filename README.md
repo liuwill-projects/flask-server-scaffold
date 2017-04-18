@@ -1,4 +1,4 @@
-[![Build Status](https://api.travis-ci.org/liuwill-projects/flask-server-scaffold.svg)](https://travis-ci.org/liuwill-projects/flask-server-scaffold)
+[![Build Status](https://travis-ci.org/liuwill-projects/flask-server-scaffold.svg?branch=master)](https://travis-ci.org/liuwill-projects/flask-server-scaffold)
 
 # flask mock server
 
