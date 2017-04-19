@@ -3,10 +3,13 @@
 import os
 from flask import Flask, jsonify # , request, current_app
 from flask_cors import CORS, cross_origin
+from flask_socketio import SocketIO, emit
 from chat.utils.jsonp import jsonp
 
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/users/*": {"origins": "*"}})
+app.config['SECRET_KEY'] = 'secret!'
+socketio = SocketIO(app)
 
 @app.route("/")
 def hello():
@@ -42,5 +45,10 @@ def me():
         "secret" : ""
     })
 
+@socketio.on('my event')
+def test_message(message):
+    emit('my response', {'data': 'got it!'})
+
 if __name__ == "__main__":
-    app.run('0.0.0.0', 5000)
+    #app.run('0.0.0.0', 5000)
+    socketio.run(app,host='0.0.0.0', port=5000)
