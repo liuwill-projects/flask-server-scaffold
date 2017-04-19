@@ -13,10 +13,8 @@ RUN apk add --no-cache ca-certificates
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 
-#RUN mkdir -p /usr/src/app  
 WORKDIR /usr/src/app
 
-#ONBUILD COPY requirements.txt /usr/src/app/ 
 COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 

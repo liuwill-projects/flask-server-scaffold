@@ -6,5 +6,5 @@ run:
 	python server.py
 
 test:
-	tox -e py
+	python setup.py test
 .PHONY: test

@@ -1,10 +1,10 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
 import os
-from flask import Flask, request, current_app
+from flask import Flask, jsonify # , request, current_app
 from flask_cors import CORS, cross_origin
-from jsonp import jsonp
-from flask import jsonify
+from chat.utils.jsonp import jsonp
+
 app = Flask(__name__)
 cors = CORS(app, resources={r"/api/users/*": {"origins": "*"}})
 
