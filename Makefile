@@ -3,7 +3,7 @@ install:
 	pip install -U flask-cors
 
 run:
-	python server.py
+	python main.py
 
 test:
 	python setup.py test

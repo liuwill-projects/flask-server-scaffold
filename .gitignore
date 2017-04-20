@@ -6,4 +6,4 @@ build
 MANIFEST
 jsonp.pyc
 pyflask.egg-info
-tests/.gitignore
+*/**/.gitignore
