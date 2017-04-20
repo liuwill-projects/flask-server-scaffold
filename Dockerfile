@@ -10,6 +10,7 @@ ENV LANG C.UTF-8
 # install ca-certificates so that HTTPS works consistently
 # the other runtime dependencies for Python are installed later
 RUN apk add --no-cache ca-certificates
+RUN apk add --no-cache gcc musl-dev
 # ensure local python is preferred over distribution python
 ENV PATH /usr/local/bin:$PATH
 

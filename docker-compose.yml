@@ -3,7 +3,7 @@ services:
   #- install node deps first `docker-compose run agenda npm install`
   pyflask:
     build: .
-    command: python server.py
+    command: python main.py
     ports:
       - "5000:5000"
     volumes:

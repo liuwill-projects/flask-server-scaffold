@@ -1,6 +1,5 @@
 install:
-	pip install -U flask
-	pip install -U flask-cors
+	pip install -f requirements.txt
 
 run:
 	python main.py
