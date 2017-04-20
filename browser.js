@@ -8,6 +8,10 @@ scriptNode.onload = function(){
     socket.on('connect', function() {
         socket.emit('my event', {data: 'I\'m connected!'});
     });
+
+    socket.on('my response', function(msg) {
+        console.log('<p>Received: ' + msg.data + '</p>');
+    });
 }
 
 document.body.appendChild(scriptNode)
